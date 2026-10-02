@@ -1,0 +1,46 @@
+{
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "preserve_recent_tokens": 30000
+  },
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "edit": "allow",
+    "task": "allow",
+    "todowrite": "allow",
+    "lsp": "allow",
+    "skill": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "external_directory": "allow",
+    "bash": {
+      "*": "allow",
+      "rm -rf /": "deny",
+      "rm -rf /*": "deny",
+      "git push *": "allow",
+      "git reset --hard*": "allow",
+      "mkfs*": "deny",
+      "dd if=* of=/dev/*": "deny",
+      "chmod -R 777 /": "deny",
+      ":(){*": "deny",
+      "curl * | sh": "deny",
+      "curl * | bash": "deny",
+      "wget * | sh": "deny",
+      "wget * | bash": "deny"
+    },
+    "doom_loop": "allow",
+    "question": "deny"
+  },
+  "experimental": {
+    "continue_loop_on_deny": true,
+    "mcp_timeout": 120000
+  },
+  "agent": {
+    "build": { "steps": 100000 },
+    "general": { "steps": 50000 }
+  }
+}

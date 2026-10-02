@@ -1,0 +1,10 @@
+{
+  "auto_continue": true,
+  "max_continues": 2000,
+  "max_minutes": 1440,
+  "cooldown_seconds": 20,
+  "stall_limit": 3,
+  "recent_commits": 5,
+  "max_handoff_chars": 4000,
+  "done_grace": 0
+}
